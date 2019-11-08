@@ -40,6 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         log.info("。。。。。");
+        log.info(".......");
         log.info("是否真的进来了这里来验证密码等东西");
         auth.userDetailsService(customUserService())
                 .passwordEncoder(new BCryptPasswordEncoder()); //user Details Service验证 ,也就是这里进行，验证。主要应该就是验证密码
