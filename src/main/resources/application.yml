@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis_security?serverTimezone=UTC
+    username: root
+    password: zhang
+    driverClassName: com.mysql.jdbc.Driver
+
+
+mybatis:
+  type-aliases-package: com.yiyezhiqiu.security.domain
+  mapper-locations: classpath:mapping/*.xml
+
+logging:
+  level:
+    com:
+      yiyezhiqiu:
+        security:
+          mapper: debug
